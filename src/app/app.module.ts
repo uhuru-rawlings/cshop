@@ -10,13 +10,15 @@ import { AppRoutingModule,navLinks } from './app-routing.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FourOrFourComponent } from './four-or-four/four-or-four.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     navLinks,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    FourOrFourComponent
   ],
   imports: [
     BrowserModule,

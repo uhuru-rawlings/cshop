@@ -9,6 +9,7 @@ import { ItemsComponent } from './items/items.component';
 import { HistoryComponent } from './history/history.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { DetailsComponent } from './details/details.component';
+import { FourOrFourComponent } from './four-or-four/four-or-four.component';
 
 
 const routes: Routes = [
@@ -19,13 +20,14 @@ const routes: Routes = [
   {path: 'cshop/history',component:HistoryComponent},
   {path: 'cshop/checkout',component:CheckoutComponent},
   {path: 'cshop/details',component:DetailsComponent},
+  {path: '**',component:FourOrFourComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const navLinks = [RegisterComponent,HomepageComponent,CartComponent,ItemsComponent,HistoryComponent,CheckoutComponent,DetailsComponent]
+export const navLinks = [RegisterComponent,HomepageComponent,CartComponent,ItemsComponent,HistoryComponent,CheckoutComponent,DetailsComponent,FourOrFourComponent]
 
 // import { NgModule } from '@angular/core';
 //
