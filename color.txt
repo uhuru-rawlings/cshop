@@ -1,0 +1,12 @@
+.1. B9D3B8 "light"
+.2. 698566 "dark'
+.3. F4F8F4 "lighter - can be used for background"
+
+register
+homepage
+cart
+shoping history
+checkout
+details
+navbar
+footer
