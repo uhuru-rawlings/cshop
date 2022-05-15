@@ -1,0 +1,11 @@
+#submitbtn{
+    height: 45px;
+    border-radius: 22px;
+    font-weight: bold;
+    color: #F4F8F4;
+    background-color: #698566;
+}
+.checkout{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

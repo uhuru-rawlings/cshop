@@ -1,0 +1,13 @@
+.sort_items{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+.form-control{
+    border-color: #B9D3B8;
+    height: 45px;
+    border-radius: 22px;
+    padding-left: 25px;
+    color:#698566;
+}
