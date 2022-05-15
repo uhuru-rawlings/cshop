@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -11,9 +12,23 @@ export class RegisterComponent implements OnInit {
   useremail:any = ''
   password:any = ''
   cpassword:any = ''
-  constructor() { }
+  constructor(private toastr:ToastrService) { }
 
   ngOnInit(): void {
+  }
+  
+  validateLogin(){
+    if(this.useremails === '' || this.userpassword === ''){
+      this.toastr.error("Please fill all required fields.")
+      return
+    }
+  }
+
+  validateSignup(){
+    if(this.useremail === '' || this.password === '' || this.cpassword === ''){
+      this.toastr.error("Please fill all required fields.")
+      return
+    }
   }
 
 }
