@@ -1,0 +1,10 @@
+.flex_registration .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.loginform{
+    width: 50%;
+}
+.signupform{
+    width: 50%;
+}
