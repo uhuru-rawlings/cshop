@@ -1,5 +1,6 @@
 .flex_registration{
     height: 100vh;
+    width: 100vw;
     color:#698566;
     background-color: #F4F8F4;
 }
@@ -29,7 +30,8 @@
     color:#B9D3B8 !important;
 }
 form{
-    width: 60%;
+    width: auto;
+    max-width: 60%;
     margin: auto;
 }
 #submitbtn{
@@ -52,8 +54,8 @@ form{
 .sociallinks .btn{
     color: #698566;
     border: 1px solid #698566;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     margin-right: 15px;
     border-radius: 50%;
 }
@@ -63,4 +65,30 @@ form{
 }
 label{
     color:#698566;
+}
+
+.loginform,
+.signupform{
+    min-width: 300px;
+}
+.signupform p{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 700px){
+    .flex_registration{
+        height: 100%;
+        width: 100%;
+    }
+    .flex_registration .container{
+        display: block;
+    }
+    .loginform,
+    .signupform{
+        width: 100%;
+    }
+    .loginform form,
+    .signupform form{
+        width: 90%;
+    }
 }
