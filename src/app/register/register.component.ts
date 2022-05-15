@@ -19,14 +19,14 @@ export class RegisterComponent implements OnInit {
   
   validateLogin(){
     if(this.useremails === '' || this.userpassword === ''){
-      this.toastr.error("Please fill all required fields.")
+      this.toastr.error("Please fill all required fields to login.")
       return
     }
   }
 
   validateSignup(){
     if(this.useremail === '' || this.password === '' || this.cpassword === ''){
-      this.toastr.error("Please fill all required fields.")
+      this.toastr.error("Please fill all required fields to signup.")
       return
     }
   }
