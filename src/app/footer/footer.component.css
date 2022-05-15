@@ -1,0 +1,7 @@
+.flex_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.social-links,.locations,.newslater{
+    width: 50%;
+}
