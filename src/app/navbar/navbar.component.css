@@ -1,0 +1,11 @@
+.nav-links a button{
+    color:#698566;
+    font-size: 23px;
+    font-weight: bold;
+}
+nav{
+    padding: 15px 0px 15px 0px;
+}
+.nav-links{
+    text-align: right;
+}

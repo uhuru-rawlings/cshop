@@ -1,0 +1,30 @@
+.welcomebody{
+    background-color: #F4F8F4;
+    color:#698566;
+    height: 100vh;
+}
+.welcometexts{
+    width: 50%;
+    margin-top: 10%;
+}
+.welcometexts button{
+    border-radius: 20px;
+    background-color: #698566;
+    color: #F4F8F4;
+    font-size: 18px;
+}
+.flex_welcometext{
+    display: flex;
+}
+.navbars{
+    position: sticky;
+    top: 0;
+}
+.shoppingsimages{
+    width: 50%;
+    height: 100%;
+}
+.welcometexts h2{
+    font-weight: bold;
+    font-size: 3em;
+}
