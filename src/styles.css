@@ -5,3 +5,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+::selection {
+    background: #c8e4d1; /* WebKit/Blink Browsers */
+  }
+::-moz-selection {
+background: #c8e4d1; /* Gecko Browsers */
+}
