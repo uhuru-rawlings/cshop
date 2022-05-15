@@ -6,11 +6,11 @@
             <form action="" method="post" autocomplete="off">
                 <div class="form-group">
                     <label for="useremail">Email Adress<sup class="text-danger">*</sup></label>
-                    <input type="email" name="useremails" id="useremails" class="useremail shadow-none form-control" placeholder="Enter Email Adress">
+                    <input type="email" name="useremails" [(ngModel)]="useremails" id="useremails" class="useremail shadow-none form-control" placeholder="Enter Email Adress">
                 </div>
                 <div class="form-group">
                     <label for="useremail">Password<sup class="text-danger">*</sup></label>
-                    <input type="password" name="userpassword" id="userpassword" class="useremail shadow-none form-control" placeholder="Enter Password">
+                    <input type="password" name="userpassword" [(ngModel)]="userpassword" id="userpassword" class="useremail shadow-none form-control" placeholder="Enter Password">
                 </div>
                 <div class="form-group">
                     <input type="submit" value="SignIn" class="btn btn-primary" id="submitbtn">
@@ -28,15 +28,15 @@
             <form action="" method="post" autocomplete="off">
                 <div class="form-group">
                     <label for="useremail">Email Adress<sup class="text-danger">*</sup></label>
-                    <input type="email" name="useremail" id="useremail" class="useremail shadow-none form-control" placeholder="Enter Email Adress">
+                    <input type="email" name="useremail" [(ngModel)]="useremail" id="useremail" class="useremail shadow-none form-control" placeholder="Enter Email Adress">
                 </div>
                 <div class="form-group">
                     <label for="useremail">Password<sup class="text-danger">*</sup></label>
-                    <input type="password" name="password" id="password" class="useremail shadow-none form-control" placeholder="Enter Password">
+                    <input type="password" name="password" [(ngModel)]="password" id="password" class="useremail shadow-none form-control" placeholder="Enter Password">
                 </div>
                 <div class="form-group">
                     <label for="useremail">Confirm Password<sup class="text-danger">*</sup></label>
-                    <input type="password" name="cpassword" id="cpassword" class="useremail shadow-none form-control" placeholder="Confirm Password">
+                    <input type="password" name="cpassword" [(ngModel)]="cpassword" id="cpassword" class="useremail shadow-none form-control" placeholder="Confirm Password">
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create Account" class="btn btn-primary" id="submitbtn">
