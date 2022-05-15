@@ -10,7 +10,6 @@ import { AppRoutingModule,navLinks } from './app-routing.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { FourOrFourComponent } from './four-or-four/four-or-four.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { FourOrFourComponent } from './four-or-four/four-or-four.component';
     navLinks,
     NavbarComponent,
     FooterComponent,
-    FourOrFourComponent
   ],
   imports: [
     BrowserModule,
