@@ -1,0 +1,32 @@
+.checkoutcomponent .container{
+    display: flex;
+}
+.checkoutcomponent .pickupform{
+    width: 50%;
+}
+.checkoutcomponent .pickupform form{
+    margin: 20px;
+}
+.checkoutcomponent .pickupform form .form-control{
+    margin-bottom: 10px;
+    border-color: #B9D3B8;
+    color: #698566;
+}
+label{
+    color: #698566;
+}
+::placeholder{
+    color: #698566;
+}
+#submitbtn{
+    background-color: #698566;
+    color: #F4F8F4;
+}
+.flex_inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.itemspicked{
+    width:50%;
+    color: #698566;
+}

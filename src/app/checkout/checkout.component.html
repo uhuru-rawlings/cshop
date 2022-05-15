@@ -1,7 +1,44 @@
-<div class="checkoutcomponent">
+<div class="nav_bgs">
     <div class="container">
         <app-navbar></app-navbar>
-        
+    </div>
+</div>
+<div class="checkoutcomponent">
+    <div class="container">
+       <div class="pickupform">
+           <form action="" autocomplete="off" method="post">
+                <div class="flex_inputs">
+                    <div class="form-group">
+                        <label for="pickupdate">Pickup Date<span class="text-danger">*</span></label>
+                         <input type="date" [(ngModel)]="pickupdate" name="pickupdate" id="pickupdate" class="form-control shadow-none" placeholder="Enter pickup date">
+                     </div>
+                     <div class="form-group">
+                         <label for="pickupcity">Pickup City<span class="text-danger">*</span></label>
+                         <input type="text" [(ngModel)]="pickupcity" name="pickupcity" id="pickupcity" class="form-control shadow-none" placeholder="Enter city(Nairobi Kenya)">
+                     </div>
+                </div>
+                <div class="flex_inputs">
+                    <div class="form-group">
+                        <label for="adress">Pickup Adress<span class="text-danger">*</span></label>
+                       <input type="text" [(ngModel)]="adress" name="adress" id="adress" class="form-control shadow-none" placeholder="Enter pickup Adress(00100)">
+                   </div>
+                   <div class="form-group">
+                        <label for="idnumber">Receiver ID Number<span class="text-danger">*</span></label>
+                       <input type="text" [(ngModel)]="idnumber" name="idnumber" id="idnumber" class="form-control shadow-none" placeholder="Enter Receiver Id number">
+                   </div>
+                </div>
+                <div class="form-group">
+                    <label for="recipientcontact">Receiver Phone Number<span class="text-danger">*</span></label>
+                    <input type="tel" [(ngModel)]="recipientcontact" name="recipientcontact" id="recipientcontact" class="form-control shadow-none" placeholder="Enter Receiver Contact">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save and Devliver" class="btn btn-primaryn shadow-none" id="submitbtn">
+                </div>
+           </form>
+       </div>
+       <div class="itemspicked">
+           <h4 class="text-center">Items Added</h4>
+       </div>
     </div>
 </div>
 <app-footer></app-footer>
