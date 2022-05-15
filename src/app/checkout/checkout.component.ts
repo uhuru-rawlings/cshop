@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-checkout',
@@ -11,9 +12,14 @@ export class CheckoutComponent implements OnInit {
   adress:any = ''
   idnumber:any = ''
   recipientcontact:any = ''
-  constructor() { }
+  constructor(private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
-
+  validateCheckout(){
+    if(this.pickupdate === ''|| this.pickupcity === '' || this.adress === '' || this.idnumber === ''|| this.recipientcontact === ''){
+      this.toastr.error("Please fill all these details to proceed.")
+      return
+    }
+  }
 }
