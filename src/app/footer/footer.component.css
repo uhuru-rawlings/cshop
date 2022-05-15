@@ -5,3 +5,36 @@
 .social-links,.locations,.newslater{
     width: 50%;
 }
+.newslater .form-group{
+    margin-bottom: 10px;
+}
+footer{
+    color: #698566;
+    background-color: #B9D3B8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    color: #698566;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.ficons{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #698566;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 3px;
+}
+.hidetext{
+    display: none;
+    transition: 4s;
+}
+footer ul li a:hover .hidetext{
+    display: block;
+}
