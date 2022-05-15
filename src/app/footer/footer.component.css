@@ -38,3 +38,12 @@ footer ul li a{
 footer ul li a:hover .hidetext{
     display: block;
 }
+#flex_conts{
+    display: inline;
+}
+#flex_conts a{
+    margin-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #698566;
+}
