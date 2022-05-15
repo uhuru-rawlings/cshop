@@ -47,3 +47,17 @@ footer ul li a:hover .hidetext{
     text-decoration: none;
     color: #698566;
 }
+#submitbtn{
+    background-color: #698566;
+    color: #F4F8F4;
+    border: 2px solid #698566;
+}
+::placeholder{
+    color: #698566;
+}
+#emailadress{
+    color: #698566;
+}
+.social-links a{
+    margin-bottom: 7px;
+}

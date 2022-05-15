@@ -12,3 +12,6 @@ body{
 ::-moz-selection {
 background: #c8e4d1; /* Gecko Browsers */
 }
+.nav_bgs{
+  background-color: #F4F8F4;
+}
