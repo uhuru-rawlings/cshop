@@ -20,10 +20,10 @@
             <div class="newslater">
                 <form action="" method="post" autocomplete="off">
                     <div class="form-group">
-                        <input type="email" name="emailadress" id="emailadress" class="form-control shadow-none" placeholder="Enter Email Adress">
+                        <input type="email"[(ngModel)]="emailadress" name="emailadress" id="emailadress" class="form-control shadow-none" placeholder="Enter Email Adress">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Sign Up" class="btn btn-primary shadow-none" id="submitbtn">
+                        <input type="submit" value="Sign Up" (click)="validateNewslater()" class="btn btn-primary shadow-none" id="submitbtn">
                     </div>
                 </form>
             </div>
