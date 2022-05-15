@@ -32,7 +32,7 @@
                     <input type="tel" [(ngModel)]="recipientcontact" name="recipientcontact" id="recipientcontact" class="form-control shadow-none" placeholder="Enter Receiver Contact">
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Save and Devliver" class="btn btn-primaryn shadow-none" id="submitbtn">
+                    <input type="submit" value="Save and Devliver" (click)="validateCheckout()"class="btn btn-primaryn shadow-none" id="submitbtn">
                 </div>
            </form>
        </div>
