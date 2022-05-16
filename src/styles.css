@@ -15,3 +15,9 @@ background: #c8e4d1; /* Gecko Browsers */
 .nav_bgs{
   background-color: #F4F8F4;
 }
+
+@media screen and (max-width: 480px){
+  .nav-links a{
+    display:inline-block !important;
+  }
+}

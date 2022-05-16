@@ -3,9 +3,13 @@
     font-size: 23px;
     font-weight: bold;
 }
+.nav-link{
+    color:#698566 !important;
+    font-size: 23px;
+}
 nav{
     padding: 15px 0px 15px 0px;
 }
-.nav-links{
-    text-align: right;
-}
+/* #navbarNav{
+    text-align: right !important;
+} */
