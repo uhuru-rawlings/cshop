@@ -61,3 +61,12 @@ footer ul li a:hover .hidetext{
 .social-links a{
     margin-bottom: 7px;
 }
+@media screen and (max-width: 450px){
+    .flex_procedures{
+        display:block;
+    }
+    .flex_procedures .createaccount,.flex_procedures .selectitem,.flex_procedures .checkout{
+        width: 90%;
+        margin:auto; 
+    }
+}
