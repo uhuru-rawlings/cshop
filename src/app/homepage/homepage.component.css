@@ -23,6 +23,7 @@
 .shoppingsimages{
     width: 50%;
     height: 100%;
+    margin-top: 10%;
 }
 .welcometexts h2{
     font-weight: bold;
@@ -49,4 +50,15 @@
     width: 25px;
     height: 25px;
     margin: auto;
+}
+
+@media screen and (max-width: 900px){
+    .shoppingsimages{
+        display:none;
+    }
+    .welcometexts{
+        width:90%;
+        background-image:url(../../assets/images/bgimages.jpg);
+        background-size: 100% 100%;
+    }
 }
