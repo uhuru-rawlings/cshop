@@ -7,13 +7,15 @@ body{
 }
 
 ::selection {
-    background: #c8e4d1; /* WebKit/Blink Browsers */
+    background: #CB9F60; /* WebKit/Blink Browsers */
   }
 ::-moz-selection {
-background: #c8e4d1; /* Gecko Browsers */
+background: #CB9F60; /* Gecko Browsers */
 }
 .nav_bgs{
-  background-color: #F4F8F4;
+  background-image:linear-gradient(to left, #CB9F60, #CB9F60, #DDC097);
+  position: sticky;
+  top:0;
 }
 
 @media screen and (max-width: 480px){

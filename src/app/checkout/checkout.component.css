@@ -9,18 +9,18 @@
 }
 .checkoutcomponent .pickupform form .form-control{
     margin-bottom: 10px;
-    border-color: #B9D3B8;
-    color: #698566;
+    border-color: #DDC097;
+    color: #A97A38;
 }
 label{
-    color: #698566;
+    color: #A97A38;
 }
 ::placeholder{
-    color: #698566;
+    color: #A97A38;
 }
 #submitbtn{
-    background-color: #698566;
-    color: #F4F8F4;
+    background-color: #A97A38;
+    color: #fff;
 }
 .flex_inputs{
     display: flex;
@@ -28,7 +28,7 @@ label{
 }
 .itemspicked{
     width:50%;
-    color: #698566;
+    color: #A97A38;
 }
 .checkoutcomponent{
     min-height:70vh;

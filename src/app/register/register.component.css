@@ -1,8 +1,8 @@
 .flex_registration{
     height: 100vh;
     width: 100vw;
-    color:#698566;
-    background-color: #F4F8F4;
+    color:#A97A38;
+    /* background-color: #DDC097; */
 }
 .flex_registration .container{
     display: flex;
@@ -23,11 +23,11 @@
     height: 45px;
     outline: none !important;
     background-color: inherit !important;
-    color: #698566;
-    border-color: #B9D3B8;
+    color: #A97A38;
+    border-color: #DDC097;
 }
 ::placeholder{
-    color:#B9D3B8 !important;
+    color:#DDC097 !important;
 }
 form{
     width: auto;
@@ -39,32 +39,32 @@ form{
     width: 100%;
     font-weight: bold;
     font-size: 20px;
-    background-color: #698566;
-    color: #F4F8F4;
-    border: 2px solid #698566;
+    background-color: #A97A38;
+    color: #fff;
+    border: 2px solid #A97A38;
     transition: 2s;
 }
 #submitbtn:hover{
-    background-color: #F4F8F4;
-    color: #698566;
+    background-color: #fff;
+    color: #A97A38;
 }
 .sociallinks{
     margin-bottom: 15px;
 }
 .sociallinks .btn{
-    color: #698566;
-    border: 1px solid #698566;
+    color: #A97A38;
+    border: 1px solid #A97A38;
     height: 45px;
     width: 45px;
     margin-right: 15px;
     border-radius: 50%;
 }
 .sociallinks .btn:hover{
-    color: #F4F8F4;
-    background-color: #698566;
+    color: #fff;
+    background-color: #A97A38;
 }
 label{
-    color:#698566;
+    color:#A97A38;
 }
 
 .loginform,
