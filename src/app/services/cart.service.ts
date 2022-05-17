@@ -22,13 +22,12 @@ export class CartService {
   addCart(item:any){
     let array_items = this.cookie.get("cartItems")
     if(array_items){
-     let new_item = JSON.parse(array_items)
-     let ln = new_item.length
-     new_item.splice(ln - 1,0,item)
-     this.cookie.set("cartItems",new_item)
+     let items = JSON.parse(array_items)
+     console.log(items)
     }else{
-      let new_item = [item]
-      this.cookie.set("cartItems",JSON.stringify(new_item))
+      let array = []
+      array.push(item)
+      this.cookie.set("cartItems",JSON.stringify(array))
     }
   }
 }

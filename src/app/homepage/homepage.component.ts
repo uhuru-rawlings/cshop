@@ -23,7 +23,6 @@ export class HomepageComponent implements OnInit {
       "jwt":JSON.parse(tokens)
     }
     this.logginservice.getuser(token).subscribe((data) => {
-      console.log(data)
     })
   }
   getitems(){

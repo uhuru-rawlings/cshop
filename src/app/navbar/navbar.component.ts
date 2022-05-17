@@ -32,7 +32,5 @@ export class NavbarComponent implements OnInit {
   setCart(){
     this.cartservice.addCartTotal()
     this.totals = this.cartservice.cartTotal
-    console.log("Totals")
-    console.log(this.cartservice.cartTotal)
   }
 }

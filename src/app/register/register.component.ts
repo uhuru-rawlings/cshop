@@ -35,7 +35,6 @@ export class RegisterComponent implements OnInit {
         'password':this.userpassword
       }
       this.logginservice.login(detail).subscribe((data) =>{
-        console.log(data)
         if(data.error){
           this.errors = data.error
         }else{
