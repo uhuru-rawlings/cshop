@@ -16,12 +16,14 @@
         </div>
         <div class="flex_itemsall">
             <div class="card" *ngFor="let item of items">
-                <div class="card-bodt">
+                <div class="card-body">
                     <div class="itemiamges"><img src="{{ 'https://res.cloudinary.com/dwvjgc2l0/' + item.item_image }}" width="100%" height="100%" alt=""></div>
-                    <div class="flex_">
+                    <div class="flex_dets">
                         <div class="itemnames">{{ item.item_name }}</div>
                         <div class="itemprice">Kshs. {{ item.item_price }}</div>
                     </div>
+                    <a href="">See Details</a>
+                    <div class="addtocart"><button class="btn shadow-none">Add to Cart</button></div>
                 </div>
             </div>
         </div>
