@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-items',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
   selectitem:any = ''
-  constructor() { }
+  items:any
+  constructor(private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +18,10 @@ export class ItemsComponent implements OnInit {
     if(this.selectitem !== ''){
       // get sorted.
     }
+  }
+  getitems(){
+    this.itemsservice.getitems().subscribe((data) => {
+      this.items  = data
+    })
   }
 }
