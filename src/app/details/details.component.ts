@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
+  item:any
+  constructor(private itemservice:ItemsService) { }
 
   ngOnInit(): void {
+    this.setItem()
   }
-
+  
+  setItem(){
+    this.item = this.itemservice.item
+  }
 }

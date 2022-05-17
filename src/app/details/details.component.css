@@ -1,0 +1,17 @@
+.container .cards{
+    display: flex;
+}
+.cards{
+    width:80%;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.itemiamges{
+    width:40%;
+}
+.addtocart button{
+    background-color: #A97A38;
+    color: #fff;
+    width: 100%;
+}

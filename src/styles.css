@@ -17,9 +17,9 @@ background: #CB9F60; /* Gecko Browsers */
   position: sticky;
   top:0;
 }
-/* nav{
+nav{
   z-index: 6;
-} */
+}
 @media screen and (max-width: 480px){
   .nav-links a{
     display:inline-block !important;

@@ -1,7 +1,22 @@
-<div class="detailscomponent">
+<div class="nav_bgs">
     <div class="container">
         <app-navbar></app-navbar>
-        
+    </div>
+</div>
+<div class="detailscomponent">
+    <div class="container">
+        <div class="cards">
+            <div class="itemiamges"><img src="{{ 'https://res.cloudinary.com/dwvjgc2l0/' + item.item_image }}" width="100%" height="100%" alt=""></div>
+            <div class="flex_dets">
+                <div class="itemnames">Name:{{ item.item_name }}</div>
+                <div class="itemprice">Item Color: {{ item.item_color }}</div>
+                <div class="itemprice">Item Quantity: {{ item.item_quantity }}</div>
+                <div class="itemprice">For Gender: {{ item.for_gender }}</div>
+                <div class="itemprice">Date Posted: {{ item.date_added }}</div>
+                <div class="itemprice">Item Description: {{ item.item_description }}</div>
+                <div class="addtocart"><button class="btn shadow-none">Add to Cart</button></div>
+            </div>
+        </div>
     </div>
 </div>
 <app-footer></app-footer>

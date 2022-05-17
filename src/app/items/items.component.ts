@@ -32,4 +32,7 @@ export class ItemsComponent implements OnInit {
       this.cateroies  = data
     })
   }
+  seeDetails(item:any){
+    this.itemsservice.setItemDet(item)
+  }
 }
