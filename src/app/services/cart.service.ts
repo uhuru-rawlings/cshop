@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-
+  cartTotal:any;
+  cartItems:any;
   constructor() { }
+
+  addToCart(item:any){
+
+  }
 }

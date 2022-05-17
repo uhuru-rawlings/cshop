@@ -43,3 +43,6 @@
     color: #fff;
     width: 100%;
 }
+.card{
+    z-index:1 !important;
+}
