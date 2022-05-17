@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

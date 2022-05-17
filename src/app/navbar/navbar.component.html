@@ -28,10 +28,10 @@
         <a class="nav-link" routerLink="/cshop/history">History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/" *ngIf="user == ''">Login</a>
+        <a class="nav-link" routerLink="/"  *ngIf="user == ''">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/" *ngIf="user != ''">Logout</a>
+        <a class="nav-link" *ngIf="user != ''">Logout</a>
       </li>
     </ul>
   </div>

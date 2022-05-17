@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ToastrService } from 'ngx-toastr';
 import { LoginService } from '../services/login.service';
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
   success:any = '' 
   errors:any = ''
   successes:any = '' 
-constructor(private toastr:ToastrService, private registerService:SignupService, private cookie:CookieService, private logginservice:LoginService) { }
+  constructor(private route:Router,private toastr:ToastrService, private registerService:SignupService, private cookie:CookieService, private logginservice:LoginService) { }
 
   ngOnInit(): void {
   }
@@ -29,15 +30,20 @@ constructor(private toastr:ToastrService, private registerService:SignupService,
       this.toastr.error("Please fill all required fields to login.")
       return
     }else{
-      let details = {
+      let detail = {
         'useremail':this.useremails,
         'password':this.userpassword
       }
-      this.logginservice.login(details).subscribe((data) =>{
+      this.logginservice.login(detail).subscribe((data) =>{
+        console.log(data)
         if(data.error){
           this.errors = data.error
         }else{
-          this.successes = data.success
+          this.cookie.set("jwt",data.jwt)
+          let cook = this.cookie.get("jwt")
+          if(cook){
+            this.route.navigate(['/cshop'])
+          }
         }
       })
     }

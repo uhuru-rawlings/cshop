@@ -14,9 +14,15 @@ export class NavbarComponent implements OnInit {
     this.getUser()
   }
   getUser(){
-    let usern = this.cookie.get("userd")
+    let usern = this.cookie.get("jwt")
     if(usern){
      this.user = usern
+    }
+  }
+  logout(){
+    let usern = this.cookie.get("jwt")
+    if(usern){
+     this.cookie.delete("jwt")
     }
   }
 }
