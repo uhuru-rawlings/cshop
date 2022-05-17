@@ -5,12 +5,6 @@
 </div>
 <div class="historycomponent">
     <div class="container">
-        <div class="items"></div>
-        <div class="checkout">
-            <a routerLink="/cshop/checkout"><button class="btn shadow-none" id="submitbtn">Proceed to Checkout</button></a>
-        </div>
-    </div>
-    <div class="container">
         <div class="carttable">
             <table class="table table-active">
                 <thead>
@@ -23,15 +17,26 @@
                     </tr>
                 </thead>
                 <tbody *ngIf="items != 'noitems'">
-                    <tr>
-                        <td>Item</td>
-                        <td>Description</td>
-                        <td>Price</td>
+                    <tr *ngFor="let item of items">
+                        <td>{{ item.item_name }}</td>
+                        <td>{{ item.item_description }}</td>
+                        <td>{{ item.item_price }}</td>
                         <td>Quantity</td>
                         <td><button class="btn btn-danger text-light"><i class="fa-solid fa-xmark"></i></button></td>
                     </tr>
                 </tbody>
+                <tbody *ngIf="items == 'noitems'">
+                    <tr *ngFor="let item of items">
+                        <td class="text-center text-danger">No Items in the cart, If items are added they'll be displayed here.</td>
+                    </tr>
+                </tbody>
             </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="items"></div>
+        <div class="checkout">
+            <a routerLink="/cshop/checkout"><button class="btn shadow-none" id="submitbtn">Proceed to Checkout</button></a>
         </div>
     </div>
 </div>

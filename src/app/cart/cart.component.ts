@@ -12,12 +12,14 @@ export class CartComponent implements OnInit {
   constructor(private cookie:CookieService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    this.setCartItems()
   }
   
   setCartItems(){
     let item_cart = this.cookie.get("cartItems")
     if(item_cart){
       this.items = JSON.parse(item_cart)
+      console.log(this.items)
     }else{
       this.items = "noitems"
     }
