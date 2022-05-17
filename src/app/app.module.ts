@@ -10,6 +10,7 @@ import { AppRoutingModule,navLinks } from './app-routing.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
