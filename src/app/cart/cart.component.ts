@@ -24,4 +24,19 @@ export class CartComponent implements OnInit {
       this.items = "noitems"
     }
   }
+
+  deletCartItem(item:any){
+    let item_cart = this.cookie.get("cartItems")
+    let arrays = JSON.parse(item_cart)
+    let new_cart:any = []
+    arrays.forEach((x:any) =>{
+      if(x.id == item.id){
+
+      }else{
+        new_cart.push(x)
+      }
+    })
+    this.cookie.set("cartItems", JSON.parse(new_cart))
+    window.location.reload()
+  }
 }
