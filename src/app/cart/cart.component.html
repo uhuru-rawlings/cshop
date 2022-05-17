@@ -22,7 +22,7 @@
                         <td>{{ item.item_description }}</td>
                         <td>{{ item.item_price }}</td>
                         <td>Quantity</td>
-                        <td><button (click)="deletCartItem(item)"s="btn btn-danger text-light shadow-none"><i class="fa-solid fa-xmark"></i></button></td>
+                        <td><button (click)="deletCartItem(item)" class="btn btn-danger text-light shadow-none"><i class="fa-solid fa-xmark"></i></button></td>
                     </tr>
                 </tbody>
                 <tbody *ngIf="items == 'noitems'">
