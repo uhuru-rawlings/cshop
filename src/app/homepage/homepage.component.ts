@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../services/login.service';
+import { ItemsService } from '../services/items.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor(private logginservice:LoginService, private cookie:CookieService) { }
+  items:any
+  constructor(private logginservice:LoginService, private cookie:CookieService,private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
   this.showuser()
+  this.getitems()
   }
 
   showuser(){
@@ -22,5 +24,13 @@ export class HomepageComponent implements OnInit {
     this.logginservice.getuser(token).subscribe((data) => {
       console.log(data)
     })
+  }
+  getitems(){
+    this.itemsservice.getitems().subscribe((data) => {
+      this.items  = data
+    })
+  }
+  seeDetails(item:any){
+    this.itemsservice.setItemDet(item)
   }
 }
