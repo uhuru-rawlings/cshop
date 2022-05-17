@@ -39,7 +39,9 @@ export class RegisterComponent implements OnInit {
         if(data.error){
           this.errors = data.error
         }else{
-          this.cookie.set("jwt",data.jwt)
+          const myDate: Date = new Date();
+          myDate.setHours( myDate.getHours() + 1 );
+          this.cookie.set("jwt",JSON.stringify(data.jwt),myDate)
           let cook = this.cookie.get("jwt")
           if(cook){
             this.route.navigate(['/cshop'])
@@ -68,5 +70,7 @@ export class RegisterComponent implements OnInit {
       })
     }
   }
+
+  
 
 }
