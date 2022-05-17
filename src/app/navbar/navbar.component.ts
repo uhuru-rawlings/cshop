@@ -9,7 +9,7 @@ import { CartService } from '../services/cart.service';
 })
 export class NavbarComponent implements OnInit {
   user:any = ''
-  totals:number = 0
+  totals:any;
   constructor(private cookie:CookieService,private cartservice:CartService) { }
 
   ngOnInit(): void {
@@ -32,5 +32,7 @@ export class NavbarComponent implements OnInit {
   setCart(){
     this.cartservice.addCartTotal()
     this.totals = this.cartservice.cartTotal
+    console.log("Totals")
+    console.log(this.cartservice.cartTotal)
   }
 }

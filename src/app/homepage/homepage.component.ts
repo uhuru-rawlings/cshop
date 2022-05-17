@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../services/login.service';
 import { ItemsService } from '../services/items.service';
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -9,7 +10,7 @@ import { ItemsService } from '../services/items.service';
 })
 export class HomepageComponent implements OnInit {
   items:any
-  constructor(private logginservice:LoginService, private cookie:CookieService,private itemsservice:ItemsService) { }
+  constructor(private cartservice:CartService,private logginservice:LoginService, private cookie:CookieService,private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
   this.showuser()
@@ -32,5 +33,9 @@ export class HomepageComponent implements OnInit {
   }
   seeDetails(item:any){
     this.itemsservice.setItemDet(item)
+  }
+
+  addToCart(item:any){
+    this.cartservice.addCart(item)
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../services/items.service';
-
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -10,7 +10,7 @@ export class ItemsComponent implements OnInit {
   selectitem:any = ''
   items:any
   cateroies:any
-  constructor(private itemsservice:ItemsService) { }
+  constructor(private cartservice:CartService,private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
     this.getitems()
@@ -34,5 +34,8 @@ export class ItemsComponent implements OnInit {
   }
   seeDetails(item:any){
     this.itemsservice.setItemDet(item)
+  }
+  addToCart(item:any){
+    this.cartservice.addCart(item)
   }
 }

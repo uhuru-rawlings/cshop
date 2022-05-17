@@ -23,7 +23,7 @@
                         <div class="itemprice">Kshs. {{ item.item_price }}</div>
                     </div>
                     <a routerLink="/cshop/details" (click)="seeDetails(item)">See Details</a>
-                    <div class="addtocart"><button class="btn shadow-none">Add to Cart</button></div>
+                    <div class="addtocart"><button class="btn shadow-none" (click)="addToCart(item)">Add to Cart</button></div>
                 </div>
             </div>
         </div>

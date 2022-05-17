@@ -13,10 +13,10 @@ export class CartService {
   addCartTotal(){
     let array_items = this.cookie.get("cartItems")
     if(array_items){
-      this.cartItems = JSON.parse(array_items)
-    }else{
       let arrays = JSON.parse(array_items)
       this.cartTotal = arrays.length
+    }else{
+      this.cartTotal = 0
     }
   }
   addCart(item:any){
