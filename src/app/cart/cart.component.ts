@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   }
   
   setCartItems(){
-    let item_cart = this.cookie.get("cartItems")
+    let item_cart = localStorage.getItem("cartItems")
     if(item_cart){
       this.items = JSON.parse(item_cart)
       console.log(this.items)
@@ -26,17 +26,18 @@ export class CartComponent implements OnInit {
   }
 
   deletCartItem(item:any){
-    let item_cart = this.cookie.get("cartItems")
-    let arrays = JSON.parse(item_cart)
-    let new_cart:any = []
-    arrays.forEach((x:any) =>{
-      if(x.id == item.id){
-
-      }else{
-        new_cart.push(x)
-      }
-    })
-    this.cookie.set("cartItems", JSON.parse(new_cart))
-    window.location.reload()
+    let item_cart:any =  localStorage.getItem("cartItems")
+    if(item_cart){
+        
+        let arrays = JSON.parse(item_cart)
+        let new_array:any = []
+        arrays.forEach((x:any) => {
+          if(x.id != item.id){
+            new_array.push(x)
+          }
+        })
+        localStorage.setItem("cartItems", JSON.stringify(new_array))
+       window.location.reload()
+    }
   }
 }

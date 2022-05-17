@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { CartService } from '../services/cart.service';
 
@@ -10,7 +11,7 @@ import { CartService } from '../services/cart.service';
 export class NavbarComponent implements OnInit {
   user:any = ''
   totals:any;
-  constructor(private cookie:CookieService,private cartservice:CartService) { }
+  constructor(private cookie:CookieService,private cartservice:CartService, private router:Router) { }
 
   ngOnInit(): void {
     this.getUser()
@@ -20,6 +21,8 @@ export class NavbarComponent implements OnInit {
     let usern = this.cookie.get("jwt")
     if(usern){
      this.user = usern
+    }else{
+      this.router.navigate(['/'])
     }
   }
   logout(){

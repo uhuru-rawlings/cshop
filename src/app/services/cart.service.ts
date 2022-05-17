@@ -11,43 +11,37 @@ export class CartService {
   
  
   addCartTotal(){
-    let items =this.cookie.get("cartItems")
+    let items:any = localStorage.getItem("cartItems")
     if(items){
-      let items =JSON.parse(this.cookie.get("cartItems"))
-      this.cartTotal = items.length
+      let item =JSON.parse(items)
+      this.cartTotal = item.length
     }else{
       this.cartTotal = 0
     }
     
   }
   addCart(item:any){
-    let array_items = this.cookie.get("cartItems")
+    let array_items = localStorage.getItem("cartItems")
     if(array_items){
-        let items = JSON.parse(array_items)
-        let addit = ''
-        items.forEach((x:any) => {
-          if(x.id == item.id){
-            addit=''
-          }else{
-            addit='additem'
-          }
-        })
+      let item_array = JSON.parse(array_items)
+      let final_array:any = item_array.filter((items:any) => items.id != item.id)
+      if(item_array.length == final_array.length){
+        final_array.push(item)
+        localStorage.setItem("cartItems",JSON.stringify(final_array))
+        this.toastr.success("Item added successfully.")
+        window.location.reload()
+      }else{
+        this.toastr.error("Item already added to the cart.")
+      }
+      
 
-        if(addit != ''){
-          items.push(item)
-          // this.cookie.delete("cartItems")
-          this.cookie.set("cartItems",JSON.stringify(items))
-          this.toastr.success("Item successfully added to the cart")
-          window.location.reload()
-        }else{
-          this.toastr.error("Item already added to the cart")
-        }
     }else{
-      let array = []
-      array.push(item)
-      this.cookie.set("cartItems",JSON.stringify(array))
-      this.toastr.success("Item successfully added to the cart")
+      let items_array:any = []
+      items_array.push(item)
+      localStorage.setItem("cartItems",JSON.stringify(items_array))
+      this.toastr.success("Item added successfully.")
       window.location.reload()
     }
+    
   }
 }
