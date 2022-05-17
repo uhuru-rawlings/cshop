@@ -14,3 +14,10 @@
 .historycomponent{
     min-height:70vh;
 }
+.flex_itemsall .card{
+    width: 200px;
+}
+.flex_itemsall .card .itemiamges{
+    width:100%;
+    height:150px;
+}
