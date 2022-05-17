@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +9,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class NavbarComponent implements OnInit {
   user:any = ''
-  constructor(private cookie:CookieService) { }
+  totals:number = 0
+  constructor(private cookie:CookieService,private cartservice:CartService) { }
 
   ngOnInit(): void {
     this.getUser()
+    this.setCart()
   }
   getUser(){
     let usern = this.cookie.get("jwt")
@@ -24,5 +27,10 @@ export class NavbarComponent implements OnInit {
     if(usern){
      this.cookie.delete("jwt")
     }
+  }
+
+  setCart(){
+    this.cartservice.addCartTotal()
+    this.totals = this.cartservice.cartTotal
   }
 }
