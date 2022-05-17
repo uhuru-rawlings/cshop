@@ -9,9 +9,12 @@ import { ItemsService } from '../services/items.service';
 export class ItemsComponent implements OnInit {
   selectitem:any = ''
   items:any
+  cateroies:any
   constructor(private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
+    this.getitems()
+    this.getcategories()
   }
   
   onChangeSort(){
@@ -22,6 +25,11 @@ export class ItemsComponent implements OnInit {
   getitems(){
     this.itemsservice.getitems().subscribe((data) => {
       this.items  = data
+    })
+  }
+  getcategories(){
+    this.itemsservice.getcategories().subscribe((data) => {
+      this.cateroies  = data
     })
   }
 }

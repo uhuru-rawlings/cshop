@@ -8,7 +8,9 @@
         <div class="sort_items">
             <div class="form-group">
                 <select name="selectitem" [(ngModel)]="selectitem" id="selectitem" class="form-control shadow-none">
-                    <option value="">--Sort By--</option>
+                    
+                    <option value="" *ngFor="let category of cateroies">{{ category.itemcategory }}</option>
+                    
                 </select>
             </div>
         </div>
