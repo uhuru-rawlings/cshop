@@ -26,8 +26,15 @@ export class HomepageComponent implements OnInit {
     })
   }
   getitems(){
+    
     this.itemsservice.getitems().subscribe((data) => {
-      this.items  = data
+      let items_array:any = []
+      data.forEach((x:any) => {
+        if(x.id < 6){
+          items_array.push(x)
+        }
+      })
+      this.items  = items_array
     })
   }
   seeDetails(item:any){

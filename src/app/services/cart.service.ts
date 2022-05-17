@@ -11,34 +11,37 @@ export class CartService {
   
  
   addCartTotal(){
-    let array_items = JSON.parse(this.cookie.get("cartItems"))
-    
-    if(array_items){
-      this.cartTotal = array_items.length
+    let items =this.cookie.get("cartItems")
+    if(items){
+      let items =JSON.parse(this.cookie.get("cartItems"))
+      this.cartTotal = items.length
     }else{
       this.cartTotal = 0
     }
+    
   }
   addCart(item:any){
     let array_items = this.cookie.get("cartItems")
     if(array_items){
-     let items = JSON.parse(array_items)
-     let addit = ''
-     items.forEach((x:any) => {
-       if(x.id == item.id){
-         this.toastr.error("Item already added to the cart")
-       }else{
-        addit='additem'
-       }
-     })
+        let items = JSON.parse(array_items)
+        let addit = ''
+        items.forEach((x:any) => {
+          if(x.id == item.id){
+            addit=''
+          }else{
+            addit='additem'
+          }
+        })
 
-     if(addit != ''){
-       items.push(item)
-       this.cookie.delete("cartItems")
-       this.cookie.set("cartItems",JSON.stringify(items))
-       this.toastr.success("Item successfully added to the cart")
-       window.location.reload()
-     }
+        if(addit != ''){
+          items.push(item)
+          // this.cookie.delete("cartItems")
+          this.cookie.set("cartItems",JSON.stringify(items))
+          this.toastr.success("Item successfully added to the cart")
+          window.location.reload()
+        }else{
+          this.toastr.error("Item already added to the cart")
+        }
     }else{
       let array = []
       array.push(item)
