@@ -57,6 +57,7 @@ export class CheckoutComponent implements OnInit {
           this.checkout.addCart(cartobj).subscribe((data) =>{
             if(data.success){
               localStorage.removeItem("cartItems")
+              window.location.reload()
             }
           })
         }

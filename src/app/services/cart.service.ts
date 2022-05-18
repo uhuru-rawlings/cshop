@@ -21,6 +21,7 @@ export class CartService {
     
   }
   addCart(item:any){
+    item['quantity'] = 1
     let array_items = localStorage.getItem("cartItems")
     if(array_items){
       let item_array = JSON.parse(array_items)
