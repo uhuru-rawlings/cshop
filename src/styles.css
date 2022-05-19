@@ -14,11 +14,16 @@ background: #CB9F60; /* Gecko Browsers */
 }
 .nav_bgs{
   background-image:linear-gradient(to left, #CB9F60, #CB9F60, #DDC097);
-  position: sticky;
-  top:0;
+  /* position: sticky;
+  top:0; */
 }
 nav{
   z-index: 6;
+}
+.card a{
+  color: #CB9F60;
+  text-decoration: none;
+  font-size:14px;
 }
 @media screen and (max-width: 480px){
   .nav-links a{

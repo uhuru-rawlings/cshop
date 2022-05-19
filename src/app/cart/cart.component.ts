@@ -63,4 +63,5 @@ export class CartComponent implements OnInit {
     localStorage.setItem("cartItems", JSON.stringify(this.items))
     window.location.reload()
   }
+  
 }

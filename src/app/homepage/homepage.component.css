@@ -90,6 +90,27 @@
 .card{
     z-index:1 !important;
 }
+.flex_testimonials{
+    display:flex;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+.imagerounded{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: auto;
+}
+.flex_testimonials .card{
+    border:none;
+}
+.flex_testimonials .names{
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.imagerounded img{
+    border-radius: 50%;
+}
 @media screen and (max-width: 900px){
     .shoppingsimages{
         display:none;

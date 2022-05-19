@@ -10,6 +10,7 @@ export class ItemsComponent implements OnInit {
   selectitem:any = ''
   items:any
   cateroies:any
+  sortedL:any;
   constructor(private cartservice:CartService,private itemsservice:ItemsService) { }
 
   ngOnInit(): void {
@@ -37,5 +38,16 @@ export class ItemsComponent implements OnInit {
   }
   addToCart(item:any){
     this.cartservice.addCart(item)
+  }
+  sortItems(event:any){
+    let sortit = event.target.value
+    let sorted_List:any = []
+    for(let x =0; x < this.items.length; x++){
+      if(this.items[x].category.itemcategory == sortit){
+        sorted_List.push(this.items[x])
+      }
+    }
+    console.log(sorted_List)
+    console.log(this.sortedL)
   }
 }

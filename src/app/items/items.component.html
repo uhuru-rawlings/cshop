@@ -7,13 +7,28 @@
     <div class="container">
         <div class="sort_items">
             <div class="form-group">
-                <select name="selectitem" [(ngModel)]="selectitem" id="selectitem" class="form-control shadow-none">
-                    
-                    <option value="" *ngFor="let category of cateroies">{{ category.itemcategory }}</option>
-                    
+                <select name="selectitem" [(ngModel)]="selectitem" (change)="sortItems($event)" id="selectitem" class="form-control shadow-none">
+                    <option value="">--select options--</option>
+                    <ng-container *ngFor="let category of cateroies">
+                        <option value="{{ category.itemcategory }}" >{{ category.itemcategory }}</option>
+                    </ng-container>
                 </select>
             </div>
         </div>
+        <div class="flex_itemsall" *ngIf="sortedL != 'Nomatch'">
+            <div class="card" *ngFor="let item of sortedL">
+                <div class="card-body">
+                    <div class="itemiamges"><img src="{{ 'https://res.cloudinary.com/dwvjgc2l0/' + item.item_image }}" width="100%" height="100%" alt=""></div>
+                    <div class="flex_dets">
+                        <div class="itemnames">{{ item.item_name }}</div>
+                        <div class="itemprice">Kshs. {{ item.item_price }}</div>
+                    </div>
+                    <a routerLink="/cshop/details" (click)="seeDetails(item)">See Details</a>
+                    <div class="addtocart"><button class="btn shadow-none" (click)="addToCart(item)">Add to Cart</button></div>
+                </div>
+            </div>
+        </div>
+
         <div class="flex_itemsall">
             <div class="card" *ngFor="let item of items">
                 <div class="card-body">

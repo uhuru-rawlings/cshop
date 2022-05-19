@@ -14,7 +14,7 @@
                 <div class="itemprice">For Gender: {{ item.for_gender }}</div>
                 <div class="itemprice">Date Posted: {{ item.date_added }}</div>
                 <div class="itemprice">Item Description: {{ item.item_description }}</div>
-                <div class="addtocart"><button class="btn shadow-none">Add to Cart</button></div>
+                <div class="addtocart"><button (click)="addToCart(item)" class="btn shadow-none">Add to Cart</button></div>
             </div>
         </div>
     </div>
