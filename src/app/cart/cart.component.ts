@@ -28,7 +28,7 @@ export class CartComponent implements OnInit {
 
   totaPrice(){
       for(let x = 0; x < this.items.length; x++){
-        this.total = this.total + this.items[x].qantity
+        this.total = this.total + (this.items[x].item_price *  this.items[x].quantity)
       }
   }
 
@@ -50,7 +50,17 @@ export class CartComponent implements OnInit {
   addaTotal(item:any, values:any){
     let item_price = item.item_price
     let item_quantity = values.target.value
+    // this.total = (this.total - item_price) + (item_quantity * item_price)
 
-    this.total = (this.total - item_price) + (item_quantity * item_price)
+    for(let i = 0; i < this.items.length; i++){
+        if(this.items[i] == item){
+          let target_item = this.items[i]
+          target_item['quantity'] = parseInt(item_quantity)
+          this.items[i] = target_item
+          console.log(this.items[i])
+        }
+    }
+    localStorage.setItem("cartItems", JSON.stringify(this.items))
+    window.location.reload()
   }
 }

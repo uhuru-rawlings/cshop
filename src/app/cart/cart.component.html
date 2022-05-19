@@ -21,7 +21,7 @@
                         <td>{{ item.item_name }}</td>
                         <td>{{ item.item_description }}</td>
                         <td>{{ item.item_price }}</td>
-                        <td><input type="number" name="quantity" (change)="addaTotal(item, $event)" id="quantity" value="1" min="1" max="5" class="form-control shadow-none"></td>
+                        <td><input type="number" name="quantity" (change)="addaTotal(item, $event)" id="quantity" value="{{ item.quantity }}" min="1" max="5" class="form-control shadow-none"></td>
                         <td><button (click)="deletCartItem(item)" class="btn btn-danger text-light shadow-none"><i class="fa-solid fa-xmark"></i></button></td>
                     </tr>
                 </tbody>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="container" *ngIf="items != 'noitems'">
-        <div class="items"></div>
+        <div class="items">Total:  {{ total }}</div>
         <div class="checkout">
             <a routerLink="/cshop/checkout"><button class="btn shadow-none" id="submitbtn">Proceed to Checkout</button></a>
         </div>
